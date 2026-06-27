@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 60% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 60% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 60% 12%;
+
+    /* Brand: deep blue from logo */
+    --primary: 224 85% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 224 85% 38%;
+
+    --muted: 210 30% 96%;
+    --muted-foreground: 222 15% 45%;
+
+    --accent: 45 95% 55%;
+    --accent-foreground: 224 85% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 224 85% 38%;
+
+    --radius: 0.75rem;
+
+    /* Logo accent colors */
+    --brand-blue: 224 85% 38%;
+    --brand-cyan: 200 90% 55%;
+    --brand-yellow: 45 95% 55%;
+    --brand-purple: 310 65% 45%;
+    --brand-red: 0 80% 55%;
+
+    --gradient-brand: linear-gradient(135deg,
+      hsl(var(--brand-yellow)) 0%,
+      hsl(var(--brand-red)) 35%,
+      hsl(var(--brand-purple)) 70%,
+      hsl(var(--brand-blue)) 100%);
+    --gradient-hero: linear-gradient(135deg,
+      hsl(224 85% 38%) 0%,
+      hsl(224 75% 28%) 100%);
+    --gradient-soft: linear-gradient(180deg,
+      hsl(210 40% 99%) 0%,
+      hsl(220 30% 95%) 100%);
+
+    --shadow-brand: 0 20px 50px -15px hsl(224 85% 38% / 0.35);
+    --shadow-card: 0 8px 30px -12px hsl(224 50% 30% / 0.18);
+    --shadow-glow: 0 0 60px hsl(45 95% 55% / 0.35);
+
+    --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .gradient-brand { background: var(--gradient-brand); }
+  .gradient-hero { background: var(--gradient-hero); }
+  .gradient-soft { background: var(--gradient-soft); }
+  .text-gradient {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-brand { box-shadow: var(--shadow-brand); }
+  .shadow-card-soft { box-shadow: var(--shadow-card); }
+  .transition-smooth { transition: var(--transition-smooth); }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
