@@ -49,7 +49,7 @@ const Index = () => {
       <WhatsAppFloat />
 
       {/* HERO */}
-      <section className="relative pt-28 md:pt-36 pb-20 md:pb-28 overflow-hidden gradient-hero text-primary-foreground">
+      <section className="relative pt-24 md:pt-32 pb-14 md:pb-20 overflow-hidden gradient-hero text-primary-foreground">
         <div className="absolute inset-0 bg-white/25 backdrop-blur-md" />
         <div className="absolute inset-0 opacity-45 pointer-events-none">
           <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full blur-3xl gradient-brand" />
@@ -113,7 +113,7 @@ const Index = () => {
       </section>
 
       {/* SOBRE */}
-      <section id="sobre" className="py-20 md:py-28">
+      <section id="sobre" className="py-14 md:py-20">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div className="reveal">
             <span className="text-sm font-bold uppercase tracking-widest text-primary">
@@ -155,7 +155,7 @@ const Index = () => {
       </section>
 
       {/* PRODUTOS */}
-      <section id="produtos" className="py-20 md:py-28 gradient-soft">
+      <section id="produtos" className="py-14 md:py-20 gradient-soft">
         <div className="container mx-auto px-4">
           <div className="reveal text-center max-w-2xl mx-auto">
             <span className="text-sm font-bold uppercase tracking-widest text-primary">
@@ -212,7 +212,7 @@ const Index = () => {
       </section>
 
       {/* MARCAS */}
-      <section id="marcas" className="py-20 md:py-28">
+      <section id="marcas" className="py-14 md:py-20">
         <div className="container mx-auto px-4">
           <div className="reveal text-center max-w-2xl mx-auto">
             <span className="text-sm font-bold uppercase tracking-widest text-primary">
@@ -244,7 +244,7 @@ const Index = () => {
       </section>
 
       {/* PINTORES PARCEIROS */}
-      <section id="pintores" className="py-20 md:py-28 gradient-soft">
+      <section id="pintores" className="py-14 md:py-20 gradient-soft">
         <div className="container mx-auto px-4">
           <div className="reveal text-center max-w-2xl mx-auto">
             <span className="text-sm font-bold uppercase tracking-widest text-primary">
@@ -298,7 +298,7 @@ const Index = () => {
       </section>
 
       {/* INSTAGRAM */}
-      <section id="instagram" className="py-20 md:py-28 gradient-soft">
+      <section id="instagram" className="py-14 md:py-20 gradient-soft">
         <div className="container mx-auto px-4 text-center">
           <div className="reveal max-w-2xl mx-auto">
             <span className="text-sm font-bold uppercase tracking-widest text-primary">
@@ -326,8 +326,66 @@ const Index = () => {
         </div>
       </section>
 
+      <section id="catalogo-cores" className="py-14 md:py-20">
+        <div className="container mx-auto px-4">
+          <div className="reveal text-center max-w-2xl mx-auto">
+            <span className="text-sm font-bold uppercase tracking-widest text-primary">
+              Catálogo de cores
+            </span>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold">
+              Inspire-se com algumas cores Sherwin-Williams
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Escolha uma família de cores e fale com a loja para conferir opções.
+            </p>
+          </div>
+
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { name: "Brancos", colors: ["#FAF8F1", "#F2EFE6", "#E8E2D6", "#D8D0C2"] },
+              { name: "Neutros", colors: ["#F2EDE3", "#D8CFC0", "#B8AA99", "#807568"] },
+              { name: "Cinzas", colors: ["#ECECEC", "#CFCFCB", "#9D9D98", "#5F625F"] },
+              { name: "Pretos", colors: ["#6E6A64", "#4C4A47", "#2E2E2C", "#171717"] },
+              { name: "Azuis", colors: ["#D8E6EA", "#9BB9C5", "#51798A", "#24495A"] },
+              { name: "Verdes", colors: ["#DDE6D5", "#A9B99A", "#6F805F", "#3F5137"] },
+              { name: "Amarelos", colors: ["#FFF1B8", "#F2D16B", "#D9A441", "#A66F24"] },
+              { name: "Laranjas", colors: ["#F6D2B8", "#E99A5D", "#C86632", "#8C3F22"] },
+              { name: "Vermelhos", colors: ["#F3C7C4", "#D97872", "#A83E3B", "#6E2425"] },
+              { name: "Rosas", colors: ["#F5D8DC", "#E6A7B2", "#C86B82", "#8F3F56"] },
+              { name: "Roxos", colors: ["#E2D7EA", "#B9A1CC", "#80619D", "#4B315F"] },
+              { name: "Marrons", colors: ["#E8D2BD", "#C9946C", "#A4603D", "#6B3D2B"] },
+            ].map((palette) => (
+              <div key={palette.name} className="reveal rounded-2xl border bg-card p-5 shadow-card-soft">
+                <h3 className="text-lg font-bold text-foreground">{palette.name}</h3>
+                <div className="mt-4 grid grid-cols-4 gap-2">
+                  {palette.colors.map((color) => (
+                    <div
+                      key={color}
+                      className="aspect-square rounded-xl border"
+                      style={{ backgroundColor: color }}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <a
+              href="https://sherwin.com.br/cores/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 font-semibold text-foreground shadow-card-soft transition-smooth hover:bg-muted"
+            >
+              Abrir catálogo completo <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+
       {/* CONTATO */}
-      <section id="contato" className="py-20 md:py-28">
+      <section id="contato" className="py-14 md:py-20">
         <div className="container mx-auto px-4">
           <div className="reveal text-center max-w-2xl mx-auto">
             <span className="text-sm font-bold uppercase tracking-widest text-primary">
@@ -344,7 +402,7 @@ const Index = () => {
               <h3 className="text-xl font-bold text-primary">Informações</h3>
               <ul className="mt-6 space-y-5">
                 <li className="flex gap-4">
-                  <div className="flex-shrink-0 h-11 w-11 rounded-xl gradient-brand text-white flex items-center justify-center">
+                  <div className="flex-shrink-0 h-11 w-11 rounded-xl border bg-background text-muted-foreground flex items-center justify-center">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
@@ -360,7 +418,7 @@ const Index = () => {
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <div className="flex-shrink-0 h-11 w-11 rounded-xl gradient-brand text-white flex items-center justify-center">
+                  <div className="flex-shrink-0 h-11 w-11 rounded-xl border bg-background text-muted-foreground flex items-center justify-center">
                     <Instagram className="h-5 w-5" />
                   </div>
                   <div>
@@ -376,7 +434,7 @@ const Index = () => {
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <div className="flex-shrink-0 h-11 w-11 rounded-xl gradient-brand text-white flex items-center justify-center">
+                  <div className="flex-shrink-0 h-11 w-11 rounded-xl border bg-background text-muted-foreground flex items-center justify-center">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
@@ -385,7 +443,7 @@ const Index = () => {
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <div className="flex-shrink-0 h-11 w-11 rounded-xl gradient-brand text-white flex items-center justify-center">
+                  <div className="flex-shrink-0 h-11 w-11 rounded-xl border bg-background text-muted-foreground flex items-center justify-center">
                     <Clock className="h-5 w-5" />
                   </div>
                   <div>
