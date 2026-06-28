@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import {
   Phone,
   MapPin,
@@ -198,7 +198,7 @@ const Index = () => {
                 className="reveal group rounded-2xl bg-card border p-7 shadow-card-soft transition-smooth hover:-translate-y-2 hover:shadow-brand"
                 style={{ transitionDelay: `${i * 60}ms` }}
               >
-                <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl gradient-brand text-white shadow-brand">
+                <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl border bg-background text-muted-foreground shadow-card-soft">
                   <p.icon className="h-7 w-7" />
                 </div>
                 <h3 className="mt-5 text-xl font-bold text-foreground">{p.title}</h3>
@@ -318,7 +318,7 @@ const Index = () => {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full gradient-brand px-7 py-3.5 font-semibold text-white shadow-brand transition-smooth hover:scale-105"
+              className="mt-8 inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 font-semibold text-foreground shadow-card-soft transition-smooth hover:bg-muted hover:scale-105"
             >
               <Instagram className="h-5 w-5" /> Ver no Instagram
             </a>
@@ -449,7 +449,7 @@ const Index = () => {
                   <div>
                     <div className="text-sm text-muted-foreground">Horário</div>
                     <div className="font-semibold text-foreground">
-                      Seg–Sex: 08:00 às 18:00
+                      Seg-Sex: 08:00 às 18:00
                       <br />
                       Intervalo para almoço: 12:00 às 13:00
                       <br />
@@ -491,7 +491,7 @@ const Index = () => {
               <img src={logo} alt="Augustin Tintas" className="h-12 w-auto" />
             </div>
             <p className="mt-4 text-white/80 text-sm leading-relaxed max-w-xs">
-              Loja de tintas, revestimentos e acessórios em São Bento do Sul – SC.
+              Loja de tintas, revestimentos e acessórios em São Bento do Sul - SC.
               Transformando projetos em realidade.
             </p>
           </div>
@@ -522,7 +522,7 @@ const Index = () => {
                   @augustintintas
                 </a>
               </li>
-              <li>Seg–Sex 08–12h e 13h-18h ·· Sáb 08–12h</li>
+              <li>Seg-Sex 08-12h e 13h-18h ·· Sáb 08-12h</li>
             </ul>
           </div>
         </div>
@@ -536,3 +536,5 @@ const Index = () => {
 };
 
 export default Index;
+
+
