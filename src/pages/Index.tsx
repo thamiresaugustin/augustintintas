@@ -243,6 +243,35 @@ const Index = () => {
         </div>
       </section>
 
+      {/* INSTAGRAM */}
+      <section id="instagram" className="py-14 md:py-20 gradient-soft">
+        <div className="container mx-auto px-4 text-center">
+          <div className="reveal max-w-2xl mx-auto">
+            <span className="text-sm font-bold uppercase tracking-widest text-primary">
+              Redes Sociais
+            </span>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold">
+              Acompanhe no Instagram
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Novidades, dicas, inspirações e os bastidores das obras com Augustin Tintas.
+            </p>
+          </div>
+
+          <div className="reveal mt-12 mx-auto max-w-4xl">
+            <InstagramFeed />
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 font-semibold text-foreground shadow-card-soft transition-smooth hover:bg-muted hover:scale-105"
+            >
+              <Instagram className="h-5 w-5" /> Ver no Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* PINTORES PARCEIROS */}
       <section id="pintores" className="py-14 md:py-20 gradient-soft">
         <div className="container mx-auto px-4">
@@ -293,35 +322,6 @@ const Index = () => {
                 </span>
               </a>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* INSTAGRAM */}
-      <section id="instagram" className="py-14 md:py-20 gradient-soft">
-        <div className="container mx-auto px-4 text-center">
-          <div className="reveal max-w-2xl mx-auto">
-            <span className="text-sm font-bold uppercase tracking-widest text-primary">
-              Redes Sociais
-            </span>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold">
-              Acompanhe no Instagram
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Novidades, dicas, inspirações e os bastidores das obras com Augustin Tintas.
-            </p>
-          </div>
-
-          <div className="reveal mt-12 mx-auto max-w-4xl">
-            <InstagramFeed />
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 font-semibold text-foreground shadow-card-soft transition-smooth hover:bg-muted hover:scale-105"
-            >
-              <Instagram className="h-5 w-5" /> Ver no Instagram
-            </a>
           </div>
         </div>
       </section>
@@ -502,8 +502,8 @@ const Index = () => {
               <li><a href="#sobre" className="hover:text-white transition-smooth">Sobre</a></li>
               <li><a href="#produtos" className="hover:text-white transition-smooth">Produtos</a></li>
               <li><a href="#marcas" className="hover:text-white transition-smooth">Marcas</a></li>
-              <li><a href="#pintores" className="hover:text-white transition-smooth">Pintores parceiros</a></li>
               <li><a href="#instagram" className="hover:text-white transition-smooth">Instagram</a></li>
+              <li><a href="#pintores" className="hover:text-white transition-smooth">Pintores parceiros</a></li>
               <li><a href="#contato" className="hover:text-white transition-smooth">Contato</a></li>
             </ul>
           </div>
@@ -536,5 +536,7 @@ const Index = () => {
 };
 
 export default Index;
+
+
 
 
