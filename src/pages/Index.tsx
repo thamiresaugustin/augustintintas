@@ -451,6 +451,8 @@ const Index = () => {
                     <div className="font-semibold text-foreground">
                       Seg–Sex: 08:00 às 18:00
                       <br />
+                      Intervalo para almoço: 12:00 às 13:00
+                      <br />
                       Sábado: 08:00 às 12:00
                     </div>
                   </div>
@@ -500,6 +502,7 @@ const Index = () => {
               <li><a href="#sobre" className="hover:text-white transition-smooth">Sobre</a></li>
               <li><a href="#produtos" className="hover:text-white transition-smooth">Produtos</a></li>
               <li><a href="#marcas" className="hover:text-white transition-smooth">Marcas</a></li>
+              <li><a href="#pintores" className="hover:text-white transition-smooth">Pintores parceiros</a></li>
               <li><a href="#instagram" className="hover:text-white transition-smooth">Instagram</a></li>
               <li><a href="#contato" className="hover:text-white transition-smooth">Contato</a></li>
             </ul>
@@ -519,7 +522,7 @@ const Index = () => {
                   @augustintintas
                 </a>
               </li>
-              <li>Seg–Sex 08–18h · Sáb 08–12h</li>
+              <li>Seg–Sex 08–12h e 13h-18h ·· Sáb 08–12h</li>
             </ul>
           </div>
         </div>
